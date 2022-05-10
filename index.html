@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Hello, Rollup!</title>
+  <title>WebGL Clouds</title>
   <link rel="stylesheet" href="./dist/main.css">
 </head>
 <body class="bg-body">
@@ -17,17 +17,6 @@
       Loading ...
     </div>
   </div>
-  <script src="http://localhost/dist/loader.js"></script>
-  <script>
-  loadScripts([
-    { type: 'importmap',
-      src: [
-        `http://localhost/dist/importmap.${isProd()?'prod.json':'json'}`,
-        // `./importmap.${isProd()?'prod.json':'json'}`
-      ]
-    },
-    { type: 'module', src: './dist/main.js' }
-  ]).catch(ex => console.error(ex));
-  </script>
+  <script type="module" src="./dist/main.js"></script>
 </body>
 </html>
